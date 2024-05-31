@@ -7,16 +7,16 @@
 </head>
 
 <body>
-    <h1><span class="resultp1"></span> to <span class="resultp2"></span></h1>
+    <h1><span class="resultp1">0</span> to <span class="resultp2">0</span></h1>
 
-    <div><span> playing to:</span><span class="goalto"></span></div>
+    <div><span> playing to:</span><span class="goalto">0</span></div>
 
     <div class="setting">
 
         <input type="number" name="goal" id="goal" />
-        <input type="button" name="player1" id="player1" value="player1" />
-        <input type="button" name="player2" id="player2" value="player2" />
-        <input type="button" name="reset" id="reset" value="reset" />
+        <input type="button" name="player1" id="player1" value="player1" onclick="scoreplayer1()"/>
+        <input type="button" name="player2" id="player2" value="player2" onclick="scoreplayer2()"/>
+        <input type="button" name="reset" id="reset" value="reset" onclick="reset()"/>
 
     </div>
 
