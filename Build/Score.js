@@ -1,34 +1,41 @@
-let countp1 = 0;
-let countp2 = 0;
-let goal = document.getElementById("goal");
 
 
-document
-    .getElementById("player1")
-    .addEventListener("click", scoreplayer1());
-document
-    .getElementById("player2")
-    .addEventListener("click", scoreplayer2());
-document
-    .getElementById("reset")
-    .addEventListener("click", reset);
-
+function goalto() {
+  countp1 = "0";
+  countp2 = "0";
+  document.querySelector(".resultp1").innerHTML = countp1;
+  document.querySelector(".resultp2").innerHTML = countp2;
+  document.querySelector(".resultp1").removeAttribute("id");
+  document.querySelector(".resultp2").removeAttribute("id");
+  return (document.getElementById("goalto").innerHTML = goal.value);
+}
 function scoreplayer1() {
-  if (countp1 <= goal.value) {
+  if (countp1 < goal.value && countp2 < goal.value) {
     countp1++;
-   return document.querySelector(".resultp1").innerHTML = countp1;
+    return (document.querySelector(".resultp1").innerHTML = countp1);
+  } else if (countp1 == goal.value) {
+    return document.querySelector(".resultp1").setAttribute("id", "winner");
   }
 }
 
 function scoreplayer2() {
-  if (countp2 <= goal.value) {
+  if (countp2 < goal.value && countp1 < goal.value) {
     countp2++;
-   return  document.querySelector(".resultp1").innerHTML = countp1;
+    return (document.querySelector(".resultp2").innerHTML = countp2);
+  } else if (countp2 == goal.value) {
+    document.querySelector(".resultp2").setAttribute("id", "winner");
   }
 }
 function reset() {
-  countp1 = 0;
-  countp2 = 0;
+  countp1 = "0";
+  countp2 = "0";
   document.querySelector(".resultp1").innerHTML = countp1;
   document.querySelector(".resultp2").innerHTML = countp2;
+  document.querySelector(".resultp1").removeAttribute("id");
+  document.querySelector(".resultp2").removeAttribute("id");
 }
+
+let countp1 = 0;
+let countp2 = 0;
+let goal = document.getElementById("goal");
+    goal.addEventListener("change", goalto);
