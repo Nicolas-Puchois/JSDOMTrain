@@ -40,5 +40,5 @@ function reset() {
 
 let countp1 = 0;
 let countp2 = 0;
-let goal = document.getElementById("goal");
+let goal = Number(document.getElementById("goal"));
     goal.addEventListener("change", goalto);
