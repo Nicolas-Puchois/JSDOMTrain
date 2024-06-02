@@ -1,6 +1,9 @@
 
 
 function goalto() {
+  if(typeof(goal.value) != "number" || goal.value <= 0) {
+    goal.value = 5
+  }
   countp1 = "0";
   countp2 = "0";
   document.querySelector(".resultp1").innerHTML = countp1;
