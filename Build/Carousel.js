@@ -44,5 +44,5 @@ let blue = document.querySelector(".blue");
 let purple = document.querySelector(".purple");
 let count = 0;
 
-document.getElementById("next").addEventListener("click", next());
-document.getElementById("previous").addEventListener("click", previous());
+document.getElementById("next").addEventListener("click", next);
+document.getElementById("previous").addEventListener("click", previous);
