@@ -1,7 +1,7 @@
 
 
 function goalto() {
-  if(typeof(goal.value) != "number" || goal.value <= 0) {
+  if(goal.value <= 0) {
     goal.value = 5
   }
   countp1 = "0";
@@ -40,5 +40,5 @@ function reset() {
 
 let countp1 = 0;
 let countp2 = 0;
-let goal = Number(document.getElementById("goal"));
+let goal = document.getElementById("goal");
     goal.addEventListener("change", goalto);
